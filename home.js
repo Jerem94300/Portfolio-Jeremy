@@ -9,7 +9,7 @@ export default function loadHomePage() {
           <button class="btn__download" onclick="window.location.href='assets/CV DWWM.pdf'">Télécharger mon CV</button>
         </div>
         <div class="photo__accueil">
-          <img src="/images/Photoroom_20241016_153653.jpeg" alt="Photo de Jérémy" class="photo__item">
+          <img src="images/Photoroom_20241016_153653.jpeg" alt="Photo de Jérémy" class="photo__item">
         </div>
       </section>
     `;
