@@ -1,6 +1,6 @@
-import loadAboutPage from 'about.js';
-import loadHomePage from 'home.js';
-import { createMainCards } from 'experience.js';
+import loadAboutPage from '.about.js';
+import loadHomePage from '.home.js';
+import { createMainCards } from '.experience.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
