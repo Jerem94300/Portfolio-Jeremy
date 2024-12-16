@@ -1,0 +1,764 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: "poppinsregular";
+  src: url(../fonts/poppins-regular-webfont.woff2) format("woff2"),
+       url(../fonts/poppins-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "poppinsregular", sans-serif;
+  background: radial-gradient(circle, #1a1a1a 50%, #000000 100%);
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0px 2px 5px rgba(127, 190, 151, 0.2); /* Ajout d'une ombre douce */
+}
+
+.title__h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav__list {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+.nav__link {
+  text-decoration: none;
+  color: #ffffff; /* Couleur par défaut */
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav__link i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav__link:hover i {
+  transform: scale(1.6); /* Agrandit l'icône au survol */
+  color: #7fbe97; /* Change la couleur de l'icône en vert au survol */
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.landing__page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+.title__main {
+  width: 600px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+}
+
+.title__h2 {
+  font-size: 4rem;
+  color: #7fbe97;
+  animation: fadeIn 2s ease-out;
+}
+
+.paragraph__main {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+
+.presentation__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between; /* Texte à gauche, image à droite */
+  align-items: center;
+  gap: 4rem; /* Espacement entre texte et image */
+  padding: 3rem;
+}
+
+
+.text__content {
+  max-width: 50%; /* Limiter la largeur du texte */
+}
+
+.photo__accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: 6rem;
+}
+
+.photo__item {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 0.1px solid #7fbe97; /* Couleur orangée */
+  box-shadow: 0 0 30px 6px rgba(90, 158, 116, 0.8); /* Initiale */
+  animation: pulse-and-scale 3s infinite ease-in-out; /* Une seule animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour hover */
+}
+
+.photo__item:hover {
+  transform: scale(1.1); /* Légère augmentation au survol */
+  box-shadow: 0 0 50px 15px rgba(90, 158, 116, 0.8); /* Accentuation du halo au survol */
+
+}
+
+
+
+
+
+.footer {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #111;
+  color: #ffffff;
+  border-top: 1px solid transparent;
+  box-shadow: 0px -2px 5px rgba(127, 190, 151, 0.2); /* Ombre douce au-dessus du footer */
+}
+
+
+.footer__nav__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.footer__nav__list .nav__link {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+/* Couleurs officielles des réseaux sociaux */
+.footer__nav__list .nav__link:hover .bi-facebook {
+  color: #1877f2; /* Couleur officielle de Facebook */
+}
+
+.footer__nav__list .nav__link:hover .bi-instagram {
+  color: #e1306c; /* Couleur officielle d'Instagram */
+}
+
+.footer__nav__list .nav__link:hover .bi-linkedin {
+  color: #0077b5; /* Couleur officielle de LinkedIn */
+}
+
+.btn__download {
+  background-color: #5a9e74; /* Vert adouci */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px 1px rgba(90, 158, 116, 0.8); /* Réduit l'intensité de l'ombre */
+  margin-top: 1rem;
+
+}
+
+.btn__download:hover {
+  opacity: 0.8;
+  background-color: #497d5d; /* Vert légèrement plus sombre au survol */
+  box-shadow: 0 0 6px rgba(73, 125, 93, 0.8);
+
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .photo__item {
+    width: 140px;
+    height: 140px;
+  }
+
+  .title__h2 {
+    font-size: 2rem;
+  }
+
+  .paragraph__main {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .text__content {
+    max-width: 90%; /* Prendre plus d'espace sur mobile */
+  }
+
+  .photo__accueil {
+    margin-top: 1.5rem;
+  }
+}
+
+
+/* Animation de l'effet de lueur progressive */
+@keyframes sun-glow {
+  0% {
+    box-shadow: 0 0 30px 10px rgba(90, 158, 116, 0.8), 
+                0 0 60px 20px rgba(90, 158, 116, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 40px 15px rgba(90, 158, 116, 0.8), 
+                0 0 80px 30px rgba(90, 158, 116, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 30px 10px rgba(90, 158, 116, 0.8), 
+                0 0 60px 20px rgba(90, 158, 116, 0.8);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-and-scale {
+  0%, 100% {
+    box-shadow: 0 0 30px 6px rgba(90, 158, 116, 0.8);
+    transform: scale(1); /* Taille normale */
+  }
+  50% {
+    box-shadow: 0 0 40px 10px rgba(90, 158, 116, 0.8);
+    transform: scale(1.05); /* Légère augmentation */
+  }
+}
+
+
+/* page about me*/
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card__front, .card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.card__front {
+  background: rgba(127, 190, 151, 0.8);
+}
+
+.card__back {
+  background: rgba(26, 26, 26, 0.9);
+  transform: rotateY(180deg);
+}
+
+
+
+/* page about me*/
+
+
+/* Styles spécifiques à la section "À propos" */
+.about-me {
+  padding: 2rem;
+  background: linear-gradient(145deg, #1a1a1a, #202020); /* Dégradé subtil */
+  color: #ffffff;
+  border-radius: 20px; /* Angles arrondis légèrement plus prononcés */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Ombre douce */
+  margin: 2rem auto; /* Centré avec espacement vertical */
+  max-width: 80%; /* Limiter la largeur pour un rendu harmonieux */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animation */
+}
+
+.about-me:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Ombre plus marquée */
+  transform: scale(1.005); /* Légère mise en avant */
+}
+
+.about-me__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7fbe97;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Conteneur des cartes */
+.about-me .card-container {
+  display: flex; /* Flexbox pour disposition horizontale */
+  flex-direction: row; /* Aligner les cartes en ligne */
+  gap: 2rem; /* Espacement entre les cartes */
+  justify-content: center; /* Centrer les cartes horizontalement */
+  align-items: center; /* Alignement vertical */
+  padding: 2rem;
+  overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+}
+
+.about-me .card-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.about-me .card-container::-webkit-scrollbar-thumb {
+  background: rgba(127, 190, 151, 0.8);
+  border-radius: 4px;
+}
+
+.about-me .card-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(127, 190, 151, 1);
+}
+
+.about-me .buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espacement entre les boutons */
+  margin-top: 2rem;
+}
+
+/* Cartes */
+.about-me .card {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.about-me .card__front,
+.about-me .card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.8s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-me .card__front {
+  background: linear-gradient(180deg, #1e1e1e, #3a3a3a);
+}
+  .about-me .card__back {
+  background: rgba(26, 26, 26, 0.9);
+  transform: rotateY(180deg);
+}
+
+.about-me .card:hover .card__front {
+  transform: rotateY(180deg);
+}
+
+.about-me .card:hover .card__back {
+  transform: rotateY(0deg);
+}
+
+.about-me .card__image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  background-color: #333; /* Fond au cas où l'image manque */
+}
+
+.about-me .card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.about-me .card__content {
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+/* Footer spécifique à "À propos" */
+.about-me .footer {
+  width: 100%; /* Prend toute la largeur de la page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #111;
+  color: #ffffff;
+  border-top: 1px solid transparent;
+  box-shadow: 0px -2px 5px rgba(127, 190, 151, 0.2);
+}
+
+.about-me .footer__nav__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  justify-content: center; /* Centrer les icônes */
+
+}
+
+.about-me .footer__nav__list .nav__link {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.about-me .footer__nav__list .nav__link:hover .bi-facebook {
+  color: #1877f2;
+}
+
+.about-me .footer__nav__list .nav__link:hover .bi-instagram {
+  color: #e1306c;
+}
+
+.about-me .footer__nav__list .nav__link:hover .bi-linkedin {
+  color: #0077b5;
+}
+
+.about-me .btn__download,
+.about-me .btn__back {
+  background-color: #5a9e74;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-me .btn__download:hover,
+.about-me .btn__back:hover {
+  background-color: #497d5d;
+  transform: scale(1.05); /* Légère augmentation au survol */
+}
+
+
+/* page experiences */
+
+/* Styles pour la page Expériences */
+/* Styles Page Expériences */
+.experience__container {
+  display: flex; /* Flexbox pour un alignement horizontal */
+  flex-direction: row; /* Les éléments s'alignent en ligne */
+  justify-content: space-between; /* Centre les cartes horizontalement */
+  align-items: center; /* Aligne les cartes verticalement */
+  gap: 8rem; /* Espacement entre les cartes */
+  padding: 2rem;
+}
+
+
+.experience__card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px; /* Conserve la perspective pour la rotation */
+  position: relative;
+  transition: transform 0.6s ease-in-out; /* Assure une transition fluide */
+
+}
+
+/* Animation au survol de la première carte */
+.experience__card:first-child {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.experience__card:first-child .card__front, 
+.experience__card:first-child .card__back {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card__front, .card__back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  transition: transform 0.6s ease-in-out;
+}
+
+
+
+/* Cards principales avec fond sombre et animation verte */
+.experience__card .card__front {
+  background: linear-gradient(145deg, #1e1e1e, #343434); /* Fond sombre */
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Contour animÃ© vert */
+.experience__card::before {
+  content: "";
+  position: absolute;
+  inset: -3px; /* Pour couvrir le contour */
+  border-radius: 10px;
+  border: 4px solid transparent;
+  background: linear-gradient(270deg, #1e1e1e, #7fbe97, #1e1e1e, #7fbe97);
+  background-size: 400% 400%;
+}
+
+/* Animation horaire */
+.experience__card:first-child::before {
+  animation: borderAnimationClockwise 4s linear infinite;
+}
+
+/* Animation antihoraire */
+.experience__card:nth-child(2)::before {
+  animation: borderAnimationCounterClockwise 4s linear infinite;
+}
+
+/* Animation des contours autour des cartes */
+@keyframes borderAnimationClockwise {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes borderAnimationCounterClockwise {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Effet de survol : Zoom 3D */
+.experience__card:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+  transition: transform 0.6s ease;
+}
+
+/* Animation de Texte IntÃ©rieur */
+.card__title {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #7fbe97, #ffffff, #7fbe97);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: textScroll 4s linear infinite;
+}
+
+@keyframes textScroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Ã‰clat lumineux Ã  l'apparition */
+.experience__card {
+  animation: cardAppear 4s ease-in-out infinite;
+
+}
+
+@keyframes cardAppear {
+  0%, 100% {
+    transform: scale(1) rotateY(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotateY(5deg);
+  }
+}
+
+
+.card__back {
+  background: rgba(26, 26, 26, 0.9);
+  transform: rotateY(180deg);
+}
+
+.experience__card.flipped .card__front {
+  transform: rotateY(180deg);
+}
+
+.experience__card.flipped .card__back {
+  transform: rotateY(0deg);
+}
+
+.card__image {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.card__title, .card__subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.subcards__container, .technologies__animation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subcard {
+  background: rgba(50, 50, 50, 0.9);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.technologies__animation img {
+  width: 60px;
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+
+/* Animation circulaire */
+.logos__circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotateCircle 12s linear infinite;
+}
+
+.logo__item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* Animation de la première et de la deuxième carte */
+.experience__card:nth-child(1),
+.experience__card:nth-child(2) {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.experience__card .card__front, 
+.experience__card .card__back {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.logos__circle img {
+  pointer-events: none;
+}
