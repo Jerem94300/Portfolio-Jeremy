@@ -37,6 +37,18 @@ body {
   box-shadow: 0px 2px 5px rgba(127, 190, 151, 0.2); /* Ajout d'une ombre douce */
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
 .title__h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -87,7 +99,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  max-width: 800px;
 }
 
 .title__main {
@@ -216,6 +227,8 @@ body {
 
 }
 
+/* ------------------RWD--------------- */
+
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -223,10 +236,26 @@ body {
     gap: 1rem;
   }
 
-  .nav__list {
-    flex-direction: column;
-    gap: 0.5rem;
+  .menu-toggle {
+    display: block;
   }
+
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav__list.open {
+    display: flex;
+  }
+
 
   .photo__item {
     width: 140px;
