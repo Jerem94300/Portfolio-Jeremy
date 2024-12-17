@@ -1,4 +1,4 @@
-@import url(reset.css);
+@import url(/css/reset.css);
 
 @font-face {
   font-family: "poppinsregular";
@@ -54,14 +54,24 @@ body {
   font-weight: bold;
 }
 
+/* Menu masqué par défaut */
 .nav__list {
   display: flex;
-  height: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
   gap: 2rem;
 }
+
+.nav__list.open {
+  display: flex;
+}
+
+
+
 .nav__link {
   text-decoration: none;
   color: #ffffff; /* Couleur par défaut */
@@ -232,8 +242,11 @@ body {
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+
+  }
+
+  .title__h1{
+    order: -1;
   }
 
   .menu-toggle {
@@ -256,13 +269,29 @@ body {
     display: flex;
   }
 
+  .landing__page{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+   
+  }
+  .title__main{
+    width: 100%;
+  }
+
 
   .photo__item {
+    display: flex;
+    order: -1;
     width: 140px;
     height: 140px;
+   
   }
 
   .title__h2 {
+    width: 100%;
+    order: 2;
     font-size: 2rem;
   }
 
@@ -279,6 +308,31 @@ body {
   .photo__accueil {
     margin-top: 1.5rem;
   }
+
+  .about-me{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container{
+    display: flex;
+    flex-direction: column !important;
+    height: 100%;
+  }
+
+  .experience__container{
+    height: 60%;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+
+
+
+
+
+
 }
 
 

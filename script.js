@@ -37,6 +37,11 @@ menuToggle.addEventListener('click', () => {
 
 
 
-
+// Script JavaScript : script.js
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    const navList = document.querySelector('.nav__list');
+    navList.classList.toggle('open');
+  });
+  
 
 
