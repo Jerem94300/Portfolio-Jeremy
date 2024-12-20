@@ -280,9 +280,12 @@ body {
   
 
   .landing__page{
+    margin-left: 0;
     display: flex;
     width: 100%;
     flex-direction: column;
+    justify-self: center;
+    align-self: center;
     
     
    
