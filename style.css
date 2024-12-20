@@ -641,6 +641,7 @@ body {
   align-items: center; /* Aligne les cartes verticalement */
   gap: 8rem; /* Espacement entre les cartes */
   padding: 2rem;
+  min-width: 800px;
 }
 
 
