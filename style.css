@@ -251,7 +251,7 @@ body {
   }
   
   .container{
-    min-width: 768px;
+    width: 100%;
     }
 
   .title__h1{
