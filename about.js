@@ -83,7 +83,7 @@ export default function loadAboutMe() {
   if (downloadButton) {
     downloadButton.addEventListener('click', () => {
       // Remplacez 'cv.pdf' par le chemin réel vers le CV
-      window.open('/assets/CV DWWM.pdf', '_blank');
+      window.open('/assets/CV_Jérémy _Abélard.pdf', '_blank');
     });
   }
 }
