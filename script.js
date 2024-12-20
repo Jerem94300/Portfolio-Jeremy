@@ -28,20 +28,5 @@ document.querySelector('.nav__experience').addEventListener('click', (e) => {
     createMainCards();  // Charge dynamiquement la page Expériences
 });
 
-const menuToggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('.nav__list');
-
-menuToggle.addEventListener('click', () => {
-  navList.classList.toggle('open');
-});
-
-
-
-// Script JavaScript : script.js
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    const navList = document.querySelector('.nav__list');
-    navList.classList.toggle('open');
-  });
-  
 
 

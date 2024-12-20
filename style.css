@@ -255,27 +255,28 @@ body {
 
   .title__h1{
     order: -1;
+    margin-top: 2rem;
   }
-
-  .menu-toggle {
-    display: block;
-  }
+ 
+ 
 
   .nav__list {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    display: flex;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    gap: 1rem;
+    height: auto;
+    gap: 3rem;
     padding: 1rem;
+    
   }
 
-  .nav__list.open {
-    display: flex;
+  .nav__link{
+    font-weight: bold !important;
+    font-size: 36px !important;
   }
+  
+
+
+  
 
   .landing__page{
     display: flex;
@@ -341,6 +342,8 @@ body {
     display: flex;
     flex-direction: column !important;
   }
+
+ 
 
   .footer{
     height: 200px;
